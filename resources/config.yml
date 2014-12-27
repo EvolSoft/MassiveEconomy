@@ -1,0 +1,5 @@
+---
+money-symbol: "$"
+default-money: 500
+min-money: 0
+...
