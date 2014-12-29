@@ -1,0 +1,53 @@
+name: MassiveEconomy
+main: MassiveEconomy\MassiveEconomyAPI
+version: "1.0 R3"
+api: [1.9.0]
+load: STARTUP
+author: EvolSoft
+description: A MassiveEconomy Plugin + API.
+website: https://www.evolsoft.tk
+
+commands:
+ massiveeconomy:
+   aliases: [meco, massiveeco, me]
+   description: MassiveEconomy commands.
+ money:
+   description: MassiveEconomy Money command.
+ pay:
+   description: MassiveEconomy Pay command.
+ setmoney:
+   description: MassiveEconomy SetMoney command.
+permissions:
+ massiveeconomy:
+  default: op
+  description: MassiveEconomy permissions.
+  children:
+   massiveeconomy.receivedefault:
+    default: true
+    description: Receive default money permission.
+   massiveeconomy.commands:
+    default: op
+    description: MassiveEconomy commands permissions.
+    children:
+      massiveeconomy.commands.help:
+       default: true
+       description: MassiveEconomy command Help permission.
+      massiveeconomy.commands.info:
+       default: op
+       description: MassiveEconomy command Info permission.
+      massiveeconomy.commands.reload:
+       default: op
+       description: MassiveEconomy command Reload permission.
+      massiveeconomy.commands.setmoney:
+       default: op
+       description: MassiveEconomy command Setmoney permission.
+      massiveeconomy.commands.pay:
+       default: true
+       description: MassiveEconomy command Pay permission.
+      massiveeconomy.commands.money:
+       default: true
+       description: MassiveEconomy command Money permission.
+       children:
+        massiveeconomy.commands.money.others:
+         default: op
+         description: Show other players' money permission.
