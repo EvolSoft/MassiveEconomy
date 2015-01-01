@@ -193,7 +193,50 @@ boolean setMoney($player, $amount)
 Set player money.<br>
 **Parameters:**<br>
 *$player* **must** be the **player name**<br>
-*$amount* the amount (must be a number)<br>
+*$amount* the amount (**must** be a **number**)<br>
 **Return:**<br>
 *player money* if the player is registered<br>
 *false* if the player isn't registered
+
+###### Pay Player:
+```php
+boolean payPlayer($receiver, $amount)
+```
+**Description:**<br>
+Pay a player.<br>
+**Parameters:**<br>
+*$receiver* **must** be the **player name**<br>
+*$amount* the amount (**must** be a **number**)<br>
+**Return:**<br>
+*true* if the player is registered<br>
+*false* if the player isn't registered
+
+###### Pay Player from Player
+```php
+int payMoneyToPlayer($sender, $amount, $receiver)
+```
+**Description:**<br>
+Pay money to player from another player.<br>
+**Parameters:**<br>
+*$sender* **must** be the **player name**<br>
+*$amount* the amount (**must** be a **number**)<br>
+*$receiver* **must** be the **player name**<br>
+**Return:**<br>
+*3* success<br>
+*2* if the sender hasn't enough money<br>
+*1* if the receiver isn't registered<br>
+*0* if the sender isn't registered
+
+###### Take Money:
+```php
+int takeMoney($player, $amount)
+```
+**Description:**<br>
+Take Money from Player.<br>
+**Parameters:**<br>
+*$player* **must** be the **player name**<br>
+*$amount* the amount (**must** be a **number**)<br>
+**Return:**<br>
+*2* success<br>
+*1* if the sender hasn't enough money<br>
+*0* if the receiver isn't registered
