@@ -44,7 +44,7 @@ In the ZIP file you will find:<br>
 
 ## Documentation
 
-***For Users:***
+#### For Users:
 
 **Configuration (config.yml):**
 ```yaml
@@ -78,7 +78,7 @@ min-money: 0
 - <dd><i><b>massiveeconomy.commands.money</b> - MassiveEconomy command Money permission.</i></dd>
 - <dd><i><b>massiveeconomy.commands.money.others</b> - Show other players' money permission.</i></dd>
 
-***For Developers***
+#### For Developers
 
 **Basic Tutorial:**
 
@@ -105,4 +105,95 @@ MassiveEconomyAPI::getInstance()->(API function);
 ```
 ***A full plugin example using MassiveEconomy API is included in the ZIP file.***
 
-**API Functions***
+**API Functions**
+
+*Get Money Symbol:*
+```php
+string getMoneySymbol()
+```
+*Description:*<br>
+Get money symbol (defined in config).<br>
+*Return:*<br>
+money symbol
+
+*Get Default Money:*
+```php
+int getDefaultMoney()
+```
+*Description:*<br>
+Get default money (defined in config).<br>
+*Return:*<br>
+default money
+
+*Get Minimum Money:*
+```php
+int getMinimumMoney()
+```
+*Description:*<br>
+Get minimum money (defined in config).<br>
+*Return:*<br>
+minimum money
+
+*Get Version:*
+```php
+string getVersion()
+```
+*Description:*<br>
+Get the MassiveEconomy plugin version.<br>
+*Return:*<br>
+plugin version
+
+*Get API Version:*
+```php
+string getAPIVersion()
+```
+*Description:*<br>
+Get the MassiveEconomy API version.<br>
+*Return:*<br>
+plugin API version
+
+*Register Player:*
+```php
+void RegisterPlayer(Player $player)
+```
+*Description:*<br>
+Register a player to MassiveEconomy.<br>
+*Parameters:*<br>
+*$player* **must** be the **Player** (pocketmine/player)
+
+*Check if a Player is registered:*
+```php
+boolean isPlayerRegistered($player)
+```
+*Description:*<br>
+Check if a player is registered to MassiveEconomy.<br>
+*Parameters:*<br>
+*$player* **must** be the **player name**<br>
+*Return:*<br>
+*true* if the player is registered<br>
+*false* if the player isn't registered
+
+*Get Money:*
+```php
+int|boolean getMoney($player)
+```
+*Description:*<br>
+Get player money.<br>
+*Parameters:*<br>
+*$player* **must** be the **player name**<br>
+*Return:*<br>
+*player money* if the player is registered<br>
+*false* if the player isn't registered
+
+*Set Money:*
+```php
+boolean setMoney($player, $amount)
+```
+*Description:*<br>
+Set player money.<br>
+*Parameters:*<br>
+*$player* **must** be the **player name**<br>
+*$amount* the amount (must be a number)<br>
+*Return:*<br>
+*player money* if the player is registered<br>
+*false* if the player isn't registered
