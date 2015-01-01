@@ -60,20 +60,49 @@ min-money: 0
 
 **Commands:**
 
-/massiveeconomy - MassiveEconomy commands (aliases: [meco, massiveeco, me])
-/money <player (optional)> - Show your money (or player's money)
-/pay <player> <amount> - Pay a player
-/setmoney <player> <amount> - Set player money
+***/massiveeconomy*** *- MassiveEconomy commands (aliases: [meco, massiveeco, me])*<br>
+***/money &lt;player (optional)&gt;*** *- Show your money (or player's money)*<br>
+***/pay &lt;player&gt; &lt;amount&gt;*** *- Pay a player*<br>
+***/setmoney &lt;player&gt; &lt;amount&gt;*** *- Set player money*<br>
 
 
 **Permissions:**
 
-- massiveeconomy.* - MassiveEconomy permissions.
-- massiveeconomy.receivedefault - Receive default money permission.
-- massiveeconomy.commands.help - MassiveEconomy command Help permission.
-- massiveeconomy.commands.info - MassiveEconomy command Info permission.
-- massiveeconomy.commands.reload - MassiveEconomy command Reload permission.
-- massiveeconomy.commands.setmoney - MassiveEconomy command SetMoney permission.
-- massiveeconomy.commands.pay - MassiveEconomy command Pay permission.
-- massiveeconomy.commands.money - MassiveEconomy command Money permission.
-- massiveeconomy.commands.money.others - Show other players' money permission.
+- <dd><i><b>massiveeconomy.*</b> - MassiveEconomy permissions.</i></dd>
+- <dd><i><b>massiveeconomy.receivedefault</b> - Receive default money permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.help</b> - MassiveEconomy command Help permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.info</b> - MassiveEconomy command Info permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.reload</b> - MassiveEconomy command Reload permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.setmoney</b> - MassiveEconomy command SetMoney permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.pay</b> - MassiveEconomy command Pay permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.money</b> - MassiveEconomy command Money permission.</i></dd>
+- <dd><i><b>massiveeconomy.commands.money.others</b> - Show other players' money permission.</i></dd>
+
+***For Developers***
+
+**Basic Tutorial:**
+
+*1. Define the plugin dependency in plugin.yml:*
+```yaml
+depend: [MassiveEconomy]
+```
+*2. Include MassiveEconomy API in your php code:*
+```php
+use MassiveEconomy\MassiveEconomyAPI;
+```
+*3. Check if MassiveEconomy API is compatible (insert this code in onEnable() function)*
+```php
+if(MassiveEconomyAPI::getInstance()->getAPIVersion() == "(used API version)"){
+            //API compatible
+        }else{
+            //API not compatible
+            $this->getPluginLoader()->disablePlugin($this);
+        }
+```
+*4. Call the API function:*
+```php
+MassiveEconomyAPI::getInstance()->(API function);
+```
+***A full plugin example using MassiveEconomy API is included in the ZIP file.***
+
+**API Functions***
