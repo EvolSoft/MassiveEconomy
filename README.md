@@ -107,93 +107,93 @@ MassiveEconomyAPI::getInstance()->(API function);
 
 **API Functions**
 
-*Get Money Symbol:*
+###### Get Money Symbol:
 ```php
 string getMoneySymbol()
 ```
-*Description:*<br>
+**Description:**<br>
 Get money symbol (defined in config).<br>
-*Return:*<br>
+**Return:**<br>
 money symbol
 
-*Get Default Money:*
+###### Get Default Money:
 ```php
 int getDefaultMoney()
 ```
-*Description:*<br>
+**Description:**<br>
 Get default money (defined in config).<br>
-*Return:*<br>
+***Return:**<br>
 default money
 
-*Get Minimum Money:*
+###### Get Minimum Money:
 ```php
 int getMinimumMoney()
 ```
-*Description:*<br>
+**Description:**<br>
 Get minimum money (defined in config).<br>
-*Return:*<br>
+**Return:**<br>
 minimum money
 
-*Get Version:*
+###### Get Version:
 ```php
 string getVersion()
 ```
-*Description:*<br>
+**Description:**<br>
 Get the MassiveEconomy plugin version.<br>
-*Return:*<br>
+**Return:**<br>
 plugin version
 
-*Get API Version:*
+###### Get API Version:
 ```php
 string getAPIVersion()
 ```
-*Description:*<br>
+**Description:**<br>
 Get the MassiveEconomy API version.<br>
-*Return:*<br>
+**Return:**<br>
 plugin API version
 
-*Register Player:*
+###### Register Player:
 ```php
 void RegisterPlayer(Player $player)
 ```
-*Description:*<br>
+**Description:**<br>
 Register a player to MassiveEconomy.<br>
-*Parameters:*<br>
+**Parameters:**<br>
 *$player* **must** be the **Player** (pocketmine/player)
 
-*Check if a Player is registered:*
+###### Check if a Player is registered:
 ```php
 boolean isPlayerRegistered($player)
 ```
-*Description:*<br>
+**Description:**<br>
 Check if a player is registered to MassiveEconomy.<br>
-*Parameters:*<br>
+**Parameters:**<br>
 *$player* **must** be the **player name**<br>
-*Return:*<br>
+**Return:**<br>
 *true* if the player is registered<br>
 *false* if the player isn't registered
 
-*Get Money:*
+###### Get Money:
 ```php
 int|boolean getMoney($player)
 ```
-*Description:*<br>
+**Description:**<br>
 Get player money.<br>
-*Parameters:*<br>
+**Parameters:**<br>
 *$player* **must** be the **player name**<br>
-*Return:*<br>
+**Return:**<br>
 *player money* if the player is registered<br>
 *false* if the player isn't registered
 
-*Set Money:*
+###### Set Money:
 ```php
 boolean setMoney($player, $amount)
 ```
-*Description:*<br>
+**Description:**<br>
 Set player money.<br>
-*Parameters:*<br>
+**Parameters:**<br>
 *$player* **must** be the **player name**<br>
 *$amount* the amount (must be a number)<br>
-*Return:*<br>
+**Return:**<br>
 *player money* if the player is registered<br>
 *false* if the player isn't registered
