@@ -122,7 +122,7 @@ int getDefaultMoney()
 ```
 **Description:**<br>
 Get default money (defined in config).<br>
-***Return:**<br>
+**Return:**<br>
 default money
 
 ###### Get Minimum Money:
@@ -159,7 +159,7 @@ void RegisterPlayer(Player $player)
 **Description:**<br>
 Register a player to MassiveEconomy.<br>
 **Parameters:**<br>
-*$player* **must** be the **Player** (pocketmine/player)
+*$player* **must** be the **Player** (pocketmine/Player)
 
 ###### Check if a Player is registered:
 ```php
