@@ -105,7 +105,7 @@ MassiveEconomyAPI::getInstance()->(API function);
 ```
 ***A full plugin example using MassiveEconomy API is included in the ZIP file.***
 
-**API Functions**
+**API Functions:**
 
 ###### Get Money Symbol:
 ```php
