@@ -238,5 +238,5 @@ Take Money from Player.<br>
 *$amount* the amount (**must** be a **number**)<br>
 **Return:**<br>
 *2* success<br>
-*1* if the sender hasn't enough money<br>
-*0* if the receiver isn't registered
+*1* if the player hasn't enough money<br>
+*0* if the player isn't registered
